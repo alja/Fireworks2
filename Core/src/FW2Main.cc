@@ -320,6 +320,14 @@ void FW2Main::addTestItems()
    }
    {
       FWDisplayProperties dp = FWDisplayProperties::defaultProperties;
+      dp.setColor(kMagenta);
+      FWPhysicsObjectDesc desc("Vertices",  TClass::GetClass("std::vector<reco::Vertex>"), "Vertices", dp, "offlinePrimaryVertices" );
+      FWEventItem* item = new FWEventItem(m_accessorFactory->accessorFor(desc.type()), desc);
+      m_items.push_back(item);
+      m_eveMng->newItem(item);
+   }
+   {
+      FWDisplayProperties dp = FWDisplayProperties::defaultProperties;
       dp.setColor(kGreen +2);
       dp.setIsVisible(false);
       FWPhysicsObjectDesc desc("Tracks",  TClass::GetClass("std::vector<reco::Track>"), "Tracks", dp, "generalTracks", "", "", "i.pt() > 1");
