@@ -13,7 +13,7 @@ Server client implementation of original Fireworks event display
 ---
 
 ```
-Usage: cmsShowWeb [OPTIONS]
+Usage: fire [OPTIONS]
 
   CMS event display.
 
@@ -22,7 +22,7 @@ Options:
   --port  Server port
   --configuration file, -c      Fireworks configuration file
   --geometry-file, -g           Path to reco geomtery file   
-  -help, -h  Show this message and exit.
+  -help, -h                     Show this message and exit.
   
 ```
 
@@ -39,33 +39,25 @@ Options:
 **Running**
 ---
 
-1. Supported system
+1. Supported systems
 
-    + Turn on Firewall?
-        - This helps protect your Mac from being attacked over the internet.
-    + Turn on logging?
-        - If there IS an infection, logs are useful for determining the source.
-    + Turn on stealth mode?
-        - Your Mac will not respond to ICMP ping requests or connection attempts from closed TCP and UDP networks.
+    + cmsShow server is supported on Linix operating systems.
+    + event display client is web browser on any ooperating system. Most test during developement are done in Chrome browser
 
 2. Local run
 
-    + Enable Gatekeeper?
-    	- Defend against malware by enforcing code signing and verifying downloaded applications before allowing them to run.
-    + Prevent automatic software whitelisting?
-        - Both built-in and downloaded software will require user approval for whitelisting.
-    + Disable Captive Portal Assistant and force login through browser on untrusted networks?
-        - Captive Portal Assistant could be triggered and direct you to a malicious site WITHOUT any user interaction.
+    + If server is running on your desktop. E.g. have Linux OS, the server prints URL in the terminal that can be pasted to your Chrome browser. E.g. this is how it looks an URL when server is running on port 7777:
+    http://localhost:7777/win1/
+    
 
-3. Closed firewall problem
+3. Running remotely, when firewall is closed​
+    + If server is on remote desktop, e.g. lxplus, it is recommened to create a SSH tunnel. Below is an example of a tunnel from port 7777 to local desktop on port 1234:
+    
+   ` ssh -f -L 1234:localhost:7777 cms-ed-1 sleep 10000`
+   
+   + The URL for event display in this case would be:
+  ` http://localhost:1234/win1/`
 
-    + Clear language modeling metadata?
-        - This includes user spelling, typing and suggestion data.
-    + Disable language modeling data collection?
-    + Clear QuickLook metadata?
-    + Clear Downloads metadata?
-    + Disable metadata collection from Downloads?
-    + Clear SiriAnalytics database?
 
 **User Guide**
 ---
