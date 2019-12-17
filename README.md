@@ -86,5 +86,5 @@ Items in the collection can be edited as well. For the moment it is possible to 
 5. Add Collection Dialog
      Like in original Fireworks, it is possible to look at possible EDM collections to analyse in graphical or table view. The dialog contains general search filed on the top. The list can be long. In this case one can click on a table column to sort by visualization purpose, label, process name, or class type.
      
-     <img src="https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/7ca1b2512e3f7570d8d3ccc2789c8411d5d82ad2/add-collection.png" align="left>
+     <img src="https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/7ca1b2512e3f7570d8d3ccc2789c8411d5d82ad2/add-collection.png" align="left">
 
