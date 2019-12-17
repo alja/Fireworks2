@@ -71,6 +71,7 @@ The collection dialog can be accessed by clicking an edit button on collection n
 
 ![edit-collection](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/3ee9c37083520812a9947d98411c86b089b5cd16/edit-collection.png)
 
+<img src="https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/3ee9c37083520812a9947d98411c86b089b5cd16/edit-collection.pn" width="300">
 
 2. Item Dialog
 Items in the collection can be edited as well. For the moment it is possible to manally set visibilty, and to see filter status that has propagated from its collection
