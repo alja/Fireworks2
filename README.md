@@ -69,7 +69,7 @@ General:
 The collection dialog can be accessed by clicking an edit button on collection node in the tree-like browser
 
 
-![edit-collection](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/3ee9c37083520812a9947d98411c86b089b5cd16/edit-collection.png =300x)
+![edit-collection](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/3ee9c37083520812a9947d98411c86b089b5cd16/edit-collection.png)
 
 
 2. Item Dialog
