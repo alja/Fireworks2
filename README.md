@@ -53,7 +53,6 @@ Options:
 3. Running remotely, when firewall is closed
 
     + If server is on remote desktop, e.g. lxplus, it is recommened to create a SSH tunnel. Below is an example of a tunnel from port 7777 to local desktop on port 1234:
-    
    ` ssh -f -L 1234:localhost:7777 cms-ed-1 sleep 10000`
 
     + The URL for event display in this case would be:
