@@ -68,7 +68,7 @@ General:
 1.  Collection Dialog
 The collection dialog can be accessed by clicking an edit button on collection node in the tree-like browser
 
-<img src="https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/edb6a0dc8b48d6bfb1918663b50ceb4b0396b1af/edit-collection.png"width="300">
+<img src="https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/edb6a0dc8b48d6bfb1918663b50ceb4b0396b1af/edit-collection.png" width="300">
 
 2. Item Dialog
 Items in the collection can be edited as well. For the moment it is possible to manally set visibilty, and to see filter status that has propagated from its collection
