@@ -1,29 +1,31 @@
 
-![stronghold logo](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/45e30b390e75381869dce49cc7e2489fae910ce8/logo-fireworks.png)
+￼![stronghold logo](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/45e30b390e75381869dce49cc7e2489fae910ce8/logo-fireworks.png)
 
-[![Downloads](http://cmsshow-rels.web.cern.ch/cmsShow-rels/webFireworks/)](http://cmsshow-rels.web.cern.ch/cmsShow-rels/webFireworks/)
+[![Downloads](https://cmsshow-rels.web.cern.ch/cmsShow-rels/webFireworks/)](http://cmsshow-rels.web.cern.ch/cmsShow-rels/webFireworks)
 
 `Fireworks2` is server-client implementation of original Fireworks event display
 
-![GIF demo](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/45e30b390e75381869dce49cc7e2489fae910ce8/demo.gif)
+￼![GIF demo](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/45e30b390e75381869dce49cc7e2489fae910ce8/demo.gif)
 
-Server client implementation of original Fireworks event display
 
 **Usage**
 ---
 
 ```
-Usage: fire [OPTIONS]
+Usage: fire [options] <data-file>
 
   CMS event display.
 
 
 Options:
-  --port  Server port
-  --configuration file, -c      Fireworks configuration file
-  --geometry-file, -g           Path to reco geomtery file   
-  -help, -h                     Show this message and exit.
-  
+General:
+  -i [ --input-files ] arg Input root files
+  -c [ --config-file ] arg Include configuration file
+  --port arg               Listen to port for new data files to open
+  --log arg                Set log level starting from 0 to 4 : kDebug, kInfo,
+                           kWarning, kError
+  --eve                    Eve plain interface
+  -h [ --help ]            Display help message
 ```
 
 **Installation Options**
@@ -42,7 +44,7 @@ Options:
 1. Supported systems
 
     + cmsShow server is supported on Linix operating systems.
-    + event display client is web browser on any ooperating system. Most test during developement are done in Chrome browser
+    + event display client is web browser on any operating system. Most test during development are done in Chrome browser
 
 2. Local run
 
@@ -52,7 +54,7 @@ Options:
 
 3. Running remotely, when firewall is closed
 
-    + If server is on remote desktop, e.g. lxplus, it is recommened to create a SSH tunnel. Below is an example of a tunnel from port 7777 to local desktop on port 1234:
+    + If server is on remote desktop, e.g. lxplus, it is recommended to create a SSH tunnel. Below is an example of a tunnel from port 7777 to local desktop on port 1234:
    ` ssh -f -L 1234:localhost:7777 cms-ed-1 sleep 10000`
 
     + The URL for event display in this case would be:
@@ -63,6 +65,15 @@ Options:
 ---
 
 1.  Collection Dialog
+The collection dialog can be accessed by clicking an edit button on collection node in the tree-like browser
+￼![edit-collection](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/3ee9c37083520812a9947d98411c86b089b5cd16/edit-collection.png)
 2. Item Dialog
-3. Add Collection Dialog
-4. Table edit
+Items in the collection can be edited as well. For the moment it is possible to manally set visibilty, and to see filter status that has propagated from its collection
+￼![edit-item](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/3ee9c37083520812a9947d98411c86b089b5cd16/edit-item.png)
+
+3. Table edit
+   In the table view user can choose any collection from the drop box in the table view header. The edit button give access to a new column dialog. The tab complete list public member function for this class. At the moment the list does not contain public functions that are inherited from base classes.  Note, just like in collection controller, the collection object to evaluate expression is accessed by 'i.functionName()' syntax.
+5. Add Collection Dialog
+     Like in original Fireworks, it is possible to look at possible EDM collections to analyse in graphical or table view. The dialog contains general search filed on the top. The list can be long. In this case one can click on a table column to sort by visualization purpose, label, process name, or class type.
+
+     ￼![edit-item](https://gist.githubusercontent.com/alja/2b7656a65bf8e78a26f1f7e93cbd5282/raw/7ca1b2512e3f7570d8d3ccc2789c8411d5d82ad2/add-collection.png)
