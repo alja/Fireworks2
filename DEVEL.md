@@ -33,3 +33,9 @@ for i in ls -d $SHELLDIR/$SCRAM_ARCH/external/*/*/lib; do LD_LIBRARY_PATH=$LD_LI
 ```
 * copy fireworks files from lib, src, and bin area from your project
 * merge .edmplugincache files
+
+## Patch tarball
+* replace root in lcg dir
+* copy Fireworks2 sources
+* copy 'Fireworks2' plu and libs (do not remove .edmplugincache)
+
