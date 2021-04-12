@@ -9,8 +9,10 @@ sap.ui.define(['rootui5/eve7/controller/Main.controller',
          MainController.prototype.onInit.apply(this, arguments);
          this.mgr.handle.setReceiver(this);
          this.mgr.RegisterController(this);
+
          var elem = this.byId("centerTitle");
-         elem.setHtmlText("<strong> CMS Web Event Display </strong>");
+         let title = "<strong>" + elem.getProperty("htmlText")+ "</strong>";
+         elem.setHtmlText(title);
       },
 
       onWebsocketClosed : function() {
