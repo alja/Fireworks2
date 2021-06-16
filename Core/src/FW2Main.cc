@@ -88,12 +88,11 @@ FW2Main::FW2Main():
    gROOT->SetMacroPath((std::string("./:")+macPath).c_str());
 
    //______________________________________________________________________________
-
    // export to environment webgui settings
    gEnv->SetValue("WebGui.HttpMaxAge", 3600);
    gEnv->SetValue("WebEve.DisableShow", 1);
    gEnv->SetValue("WebGui.SenderThrds", "yes");
-      
+
    REX::REveManager::Create();
    
    ROOT::Experimental::gEve->GetWebWindow()->SetClientVersion("00.06");
@@ -102,7 +101,7 @@ FW2Main::FW2Main():
    m_context->setGeom(&m_geom);
 
    m_collections =  REX::gEve->SpawnNewScene("Collections","Collections");
-   
+
    m_itemsManager = new FWEventItemsManager;
    m_tableManager = new FWTableViewManager;
    m_eveMng = new FW2EveManager(m_tableManager);
@@ -153,14 +152,14 @@ void FW2Main::parseArguments(int argc, char *argv[])
    char **newArgv = argv;
    po::variables_map vm;
 
- 
-   try{ 
+
+   try {
       po::store(po::command_line_parser(newArgc, newArgv).
                 options(desc).positional(p).run(), vm);
 
       po::notify(vm);
    }
-   catch ( const std::exception& e)
+   catch (const std::exception& e)
    {
       // Return with exit status 0 to avoid generating crash reports
 
@@ -174,12 +173,12 @@ void FW2Main::parseArguments(int argc, char *argv[])
       exit(0);
    }
       
-   if(vm.count(kPortCommandOpt)) {
+   if (vm.count(kPortCommandOpt)) {
       auto portNum = vm[kPortCommandOpt].as<unsigned int>();
       gEnv->SetValue("WebGui.HttpPort", (int)portNum);
 
    }
-   if(vm.count(kLogLevelCommandOpt)) {
+   if (vm.count(kLogLevelCommandOpt)) {
       fwlog::LogLevel level = (fwlog::LogLevel)(vm[kLogLevelCommandOpt].as<unsigned int>());
       fwlog::setPresentLogLevel(level);
    }
